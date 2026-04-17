@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { AuthContext } from "./AuthContext.js";
+import { AuthContext } from "./AuthContext";
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(() => {
@@ -12,35 +12,26 @@ export function AuthProvider({ children }) {
   });
 
   const login = (data) => {
-    // ─── DEFENSIVE: data could be the full axios response or just the body ───
-    // If someone accidentally passed res instead of res.data, handle it
     const payload = data?.data ?? data;
 
     const token = payload?.token;
+
     const userObj = {
       _id: payload?._id,
       name: payload?.name,
       email: payload?.email,
       role: payload?.role,
+      catererId: payload?.catererId || null,
     };
 
-    // Guard: never save an undefined/null token
     if (!token) {
-      console.error("❌ login() called but no token found in payload:", payload);
+      console.error("No token found");
       return;
     }
 
-    console.log("✅ Saving token:", token);
-    console.log("✅ Saving user:", userObj);
-
     localStorage.setItem("token", token);
-    localStorage.setItem("cater-user", JSON.stringify({
-  _id: data._id,
-  name: data.name,
-  email: data.email,
-  role: data.role,
-  catererId: data.catererId   // 🔥 ADD THIS
-}));
+    localStorage.setItem("cater-user", JSON.stringify(userObj));
+
     setUser(userObj);
   };
 

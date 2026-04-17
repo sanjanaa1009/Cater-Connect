@@ -3,7 +3,7 @@ import Order from "../models/Order.js";
 import protect from "../middleware/authMiddleware.js";
 
 const router = express.Router();
-
+  
 // POST /api/orders — Place new order
 router.post("/", protect, async (req, res) => {
   try {

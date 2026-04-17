@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export default function Orders() {
+export default function CatererOrders() {
   const [orders, setOrders] = useState([]);
 
   const fetchOrders = async () => {
