@@ -2,7 +2,7 @@
 
 A full-stack web app to discover and book local caterers.
 
-## Deployed site: https://caterer-connect-1.onrender.com/
+# Deployed site: https://caterer-connect-1.onrender.com/
 
 ## 🚀 Features
 - Browse caterers
