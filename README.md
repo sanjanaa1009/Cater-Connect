@@ -2,8 +2,8 @@
 
 A full-stack web app to discover and book local caterers.
 
-## Deployed site: https://caterer-connect-1.onrender.com/
-## Demo Video: https://youtu.be/ORJGDDsCp9M
+### Deployed site: https://caterer-connect-1.onrender.com/
+### Demo Video: https://youtu.be/ORJGDDsCp9M
 ## 🚀 Features
 - Browse caterers
 - View menus
