@@ -4,6 +4,19 @@ A full-stack web app to discover and book local caterers.
 
 ### Deployed site: https://caterer-connect-1.onrender.com/
 ### Demo Video: https://youtu.be/ORJGDDsCp9M
+
+### Demo Credentials
+The deployed application requires authentication to access the interfaces.
+
+#### User Interface
+Email: johnn@test.com
+Password: john@123
+#### Caterer Interface
+Email: royal@test.com
+Password: royal@123
+
+You can use these credentials to log in and explore the deployed application.
+
 ## 🚀 Features
 - Browse caterers
 - View menus
